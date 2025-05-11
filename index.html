@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- Cabeçalho do documento com metadados e configurações básicas -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Um site especial com mensagens de amor e surpresas românticas">
+    <title>Para Minha Muie 💖</title>
+    <!-- Importação de fontes do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Elementos decorativos para efeitos visuais -->
+    <div class="twinkling-lights" aria-hidden="true"></div>
+    <canvas class="stars" id="stars-canvas" style="display:none;" aria-hidden="true"></canvas>
+    
+    <!-- Botão para alternar entre modo claro e escuro -->
+    <div class="night-mode-toggle" id="nightModeToggle">
+        <div class="toggle-handle">
+            <div class="moon">🌙</div>
+            <div class="sun">☀️</div>
+        </div>
+    </div>
+
+    <!-- Tela de boas-vindas inicial -->
+    <div class="welcome-screen">
+        <div class="welcome-content">
+            <h1 class="welcome-title">Bem-vinda ao Nosso Mundo 💖</h1>
+            <p class="welcome-text">Clique no coração para começar nossa jornada...</p>
+            <button class="heart-button" onclick="startJourney()" aria-label="Iniciar jornada">
+                💖
+            </button>
+        </div>
+    </div>
+
+    <!-- Conteúdo principal do site -->
+    <main class="container hidden">
+        <div class="main-content">
+            <h1 class="main-title">Para a Muie Mais Linda 💖</h1>
+            
+            <!-- Mensagem secreta escondida -->
+            <div class="secret-message hidden">
+                <p>Você encontrou uma mensagem secreta! 💌</p>
+                <button class="btn" onclick="showSecretSurprise()">Revelar Surpresa</button>
+            </div>
+
+            <!-- Barra de navegação com botões de interação -->
+            <nav class="actions" aria-label="Ações românticas">
+                <!-- Botões com diferentes funcionalidades interativas -->
+                <button class="btn" onclick="showSurprise()" aria-label="Mostrar surpresa fofa">
+                    Surpresa Fofa
+                </button>
+                <button class="btn2" onclick="showLoveModal()" aria-label="Mostrar mensagem de amor">
+                    Eu te amo
+                </button>
+                <button class="btn" onclick="showLetter()" aria-label="Mostrar cartinha">
+                    Cartinha
+                </button>
+                <button class="btn2" onclick="showConfetti()" aria-label="Mostrar confetes e balões">
+                    Confetes/Balões
+                </button>
+                <!-- Botão de controle de música -->
+                <button class="music-btn" id="music-btn" title="Tocar/Pausar música" aria-label="Tocar ou pausar música">
+                    &#127925;
+                </button>
+                <!-- Botão para alternar modo noturno -->
+                <button class="btn" onclick="toggleNightMode()" id="night-btn" aria-label="Alternar modo noturno">
+                    🌙
+                </button>
+                <button class="btn2" onclick="showPoem()" aria-label="Mostrar poema">
+                    Poema
+                </button>
+                <button class="btn" onclick="showRandomSurprise()" aria-label="Mostrar surpresa aleatória">
+                    Surpresa Aleatória
+                </button>
+                <button class="btn2" onclick="showLoveList()" aria-label="Mostrar lista de amor">
+                    Lista de Amor
+                </button>
+                <button class="btn" onclick="createKisses()" aria-label="Criar beijos animados">
+                    Beijos
+                </button>
+                <button class="btn2" onclick="showQuickGame()" aria-label="Jogo rápido">
+                    Jogo Rápido
+                </button>
+                <button class="btn" onclick="showMovieTip()" aria-label="Dica de Filme ou Série">
+                    Dica de Filme/Série
+                </button>
+            </nav>
+
+            <!-- Easter egg escondido -->
+            <div class="easter-egg hidden">
+                <p>Parabéns! Você encontrou um ovo de Páscoa! 🥚</p>
+                <button class="btn" onclick="showEasterEgg()">Revelar Surpresa Especial</button>
+            </div>
+
+            <!-- Mensagem principal do site -->
+            <p class="main-message">
+                Você é o meu sorriso favorito, minha inspiração diária e o motivo do meu coração bater mais forte.<br>
+                Obrigado por ser tão incrível e por iluminar meus dias com seu amor!<br>
+                <strong>Te amo muito! 💕</strong>
+            </p>
+
+            <!-- Botão de tesouro escondido -->
+            <div class="hidden-treasure">
+                <button class="treasure-btn" onclick="revealTreasure()">🔍</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal de escolha de caminho -->
+    <div class="choice-modal hidden">
+        <div class="choice-content">
+            <h2>Escolha seu caminho...</h2>
+            <div class="choice-buttons">
+                <button class="btn" onclick="choosePath('romantic')">Caminho Romântico 💝</button>
+                <button class="btn2" onclick="choosePath('fun')">Caminho Divertido 🎉</button>
+                <button class="btn" onclick="choosePath('surprise')">Caminho Surpresa 🎁</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Elemento de áudio para música de fundo -->
+    <audio id="bg-music" loop preload="auto" aria-label="Música de fundo">
+        <source src="https://cdn.pixabay.com/audio/2023/02/10/audio_12c6b6b6b6.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Link para o arquivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>
